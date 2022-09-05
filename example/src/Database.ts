@@ -8,7 +8,7 @@ let datasource: DataSource;
 
 export const lowLevelInit = () => {
   // Start by opening a connection
-  const { status: dbOpenStatus, message } = sqlite.open('test');
+  const { status: dbOpenStatus, message } = sqlite.open();
 
   if (dbOpenStatus) {
     console.error('Failed to open the Database', message);
